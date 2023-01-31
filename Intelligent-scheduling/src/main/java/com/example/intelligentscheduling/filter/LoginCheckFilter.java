@@ -49,7 +49,8 @@ public class LoginCheckFilter implements Filter{
                 "/front/**",
                 "/common/**",
                 "/user/sendMsg",
-                "/user/login"
+                "/user/login",
+                "/test"
         };
 
 
