@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 
 /*
 * LoginCheckFilter的doFilter方法
-* EmployeeController的update方法
+* UserController的update方法
   MyMeta0bjectHandler的updateFill方法
     涉及到以上类的中的方法都是与相同的一个线程
 *

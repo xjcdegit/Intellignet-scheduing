@@ -43,13 +43,14 @@ public class LoginCheckFilter implements Filter{
 
         //定义不需要处理的请求路径
         String[] urls = new String[]{
-                "/employee/login",
-                "/employee/logout",
+                "/User/login",
+                "/User/logout",
                 "/backend/**",
                 "/front/**",
                 "/common/**",
                 "/user/sendMsg",
-                "/user/login"
+                "/user/login",
+                "/test"
         };
 
 
@@ -64,7 +65,7 @@ public class LoginCheckFilter implements Filter{
         }
 
         //4-1、判断登录状态，如果已登录，则直接放行
-        if(request.getSession().getAttribute("employee") != null){
+        if(request.getSession().getAttribute("User") != null){
             log.info("用户已登录，用户id为：{}",request.getSession().getAttribute("employee"));
 
             Long empId = (Long)request.getSession().getAttribute("employee");
