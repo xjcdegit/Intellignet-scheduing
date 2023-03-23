@@ -20,6 +20,12 @@ public class R<T> {
 
     private Map map = new HashMap(); //动态数据
 
+    public static R success(){
+        R r = new R();
+        r.code = 1;
+        return r;
+    }
+
     public static <T> R<T> success(T object) {
         R<T> r = new R<T>();
         r.data = object;
@@ -38,5 +44,6 @@ public class R<T> {
         this.map.put(key, value);
         return this;
     }
+
 
 }

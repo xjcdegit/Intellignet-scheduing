@@ -10,6 +10,7 @@ import lombok.Data;
  */
 @Data
 public class Staff {
+    //员工id
     private int id;
 
     //门店id

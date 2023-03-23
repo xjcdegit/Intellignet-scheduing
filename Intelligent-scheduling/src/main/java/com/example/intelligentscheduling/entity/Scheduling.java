@@ -16,6 +16,9 @@ public class Scheduling {
     //员工id
     private int staffId;
 
+    //工作日期（星期几）
+    private int day;
+
     //起始工作时间
     private int startTime;
 }

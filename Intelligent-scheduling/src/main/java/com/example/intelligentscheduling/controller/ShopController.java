@@ -38,4 +38,16 @@ public class ShopController {
     public R insert(@RequestBody Staff staff){
         return shopService.insert(staff);
     }
+
+    /**
+     * 删除员工
+     */
+    @GetMapping("/delete")
+    public R deleteByStaffId(@PathVariable int id){
+        if(shopService.deleteByStaffId(id)){
+            return R.success();
+        }else{
+            return R.error("删除失败");
+        }
+    }
 }

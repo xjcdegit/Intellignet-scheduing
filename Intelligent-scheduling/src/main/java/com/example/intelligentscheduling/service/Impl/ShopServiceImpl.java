@@ -46,4 +46,14 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements Sh
         }
         return R.error("添加失败");
     }
+
+    /**
+     * 根据id删除员工
+     * @param id
+     * @return
+     */
+    @Override
+    public boolean deleteByStaffId(int id) {
+        return staffService.removeById(id);
+    }
 }
