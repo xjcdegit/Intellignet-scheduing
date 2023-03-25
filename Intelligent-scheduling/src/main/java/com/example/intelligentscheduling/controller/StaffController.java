@@ -6,10 +6,13 @@ package com.example.intelligentscheduling.controller;/*
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.example.intelligentscheduling.common.R;
 import com.example.intelligentscheduling.entity.Preference;
+import com.example.intelligentscheduling.entity.Staff;
 import com.example.intelligentscheduling.service.PreferenceService;
 import com.example.intelligentscheduling.service.StaffService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/staff")
@@ -37,6 +40,15 @@ public class StaffController {
     public R preference(@RequestBody Preference preference){
         boolean loop = preferenceService.updateById(preference);
         return R.success("修改成功");
+    }
+
+    /**
+     * 获取所有员工
+     */
+    @GetMapping("/all")
+    public R getStaffAll(){
+        List<Staff> list = staffService.list();
+        return R.success(list);
     }
 
 }

@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ServletComponentScan
 @EnableTransactionManagement //开启事务注解的支持
 public class IntelligentSchedulingApplication {
-
+//com.example.intelligentscheduling.mapper.SchedulingMapper
     public static void main(String[] args) {
         SpringApplication.run(IntelligentSchedulingApplication.class, args);
     }
