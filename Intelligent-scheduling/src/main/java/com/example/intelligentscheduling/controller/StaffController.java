@@ -25,7 +25,7 @@ public class StaffController {
     /**
      * 获取员工喜好
      */
-    @GetMapping
+    @GetMapping("/{id}")
     public R getPreferenceById(@PathVariable int id){
         Preference preference = preferenceService.getById(id);
         return R.success(preference);
