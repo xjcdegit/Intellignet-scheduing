@@ -12,7 +12,9 @@ import lombok.Data;
 public class Preference {
     private int id;
 
-    private String name;
 
-    private int type;
+    /**
+     * 偏好
+     */
+    private String type;
 }

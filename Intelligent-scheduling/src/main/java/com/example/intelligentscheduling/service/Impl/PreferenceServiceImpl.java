@@ -12,5 +12,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PreferenceServiceImpl extends ServiceImpl<PreferenceMapper,Preference> implements PreferenceService{
-
+    /**
+     * 根据用户id获取偏好
+     * @param id
+     * @return
+     */
+    @Override
+    public Preference selectById(int id) {
+        return getById(id);
+    }
 }

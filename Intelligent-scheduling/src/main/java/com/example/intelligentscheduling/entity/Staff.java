@@ -18,4 +18,13 @@ public class Staff {
 
     //名字
     private String name;
+
+    //职位
+    private String post;
+
+    //电话
+    private String tel;
+
+    //邮箱
+    private String email;
 }

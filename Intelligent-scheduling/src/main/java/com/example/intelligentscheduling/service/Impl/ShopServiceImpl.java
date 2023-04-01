@@ -12,11 +12,14 @@ import com.example.intelligentscheduling.mapper.ShopMapper;
 import com.example.intelligentscheduling.service.ShopService;
 import com.example.intelligentscheduling.service.StaffService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.util.List;
 
 @Service
+@EnableTransactionManagement(proxyTargetClass = true)
 public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements ShopService {
     @Autowired
     private StaffService staffService;
@@ -55,5 +58,16 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements Sh
     @Override
     public boolean deleteByStaffId(int id) {
         return staffService.removeById(id);
+    }
+
+    /**
+     * 根据门店号获取门店信息
+     * @param id
+     * @return
+     */
+    @Override
+    public Shop selectById(int id) {
+        Shop shop = this.getById(id);
+        return shop;
     }
 }

@@ -16,4 +16,6 @@ public interface ShopService extends IService<Shop> {
     R insert(Staff staff);
 
     boolean deleteByStaffId(int id);
+
+    Shop selectById(int id);
 }

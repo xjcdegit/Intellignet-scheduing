@@ -19,6 +19,17 @@ public class Scheduling {
     //工作日期（星期几）
     private int day;
 
-    //起始工作时间
-    private int startTime;
+    //工作时间
+    private String time;
+
+    //周数
+    private int week;
+
+    public Scheduling(int shopId, int staffId, int day, String time, int week) {
+        this.shopId = shopId;
+        this.staffId = staffId;
+        this.day = day;
+        this.time = time;
+        this.week = week;
+    }
 }
